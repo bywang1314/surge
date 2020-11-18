@@ -1,0 +1,81 @@
+#!name=Surge_Task
+#!desc=定时签到脚本
+#!system=ios
+
+[Script]
+# true 表示开启，false 表示关闭
+# http-request 处理请求的脚本
+# http-response 处理请求响应的脚本
+# cron 定时脚本
+
+# > 会话切换
+# 会话切换 = type=cron,cronexp="43,45 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js,script-update-interval=0,wake-system=true
+
+# > 机场签到
+机场签到 = type=cron,cronexp="35 8 * * *",script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkin_env.js,script-update-interval=0,wake-system=true
+
+# > B站直播签到
+B站直播 = type=cron,cronexp="1 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0,wake-system=true
+# 瓜子转硬币 = type=cron,cronexp="1 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js,script-update-interval=0,wake-system=true
+
+# > B站漫画
+B站漫画 = type=cron,cronexp="1 0 * * *",script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js,script-update-interval=0,wake-system=true
+
+# > 京东多合一
+京东 = type=cron,cronexp="2 0 * * *",script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0,wake-system=true
+# > 京东抽奖
+京东抽奖 = type=cron,cronexp="2 0 * * *",script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_lotteryMachine.js,script-update-interval=0,wake-system=true
+
+# > 腾讯视频签到
+腾讯视频 = type=cron,cronexp="3 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,script-update-interval=0,wake-system=true
+
+# > 爱奇艺签到
+爱奇艺 = type=cron,cronexp="42,44 0 * * *",script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0,wake-system=true
+
+# > 苏宁易购
+苏宁易购 = type=cron,cronexp="3 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.js,script-update-interval=0,wake-system=true
+
+# > 中国电信
+中国电信 = type=cron,cronexp="3 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,script-update-interval=0,wake-system=true
+# > 电信金豆换话费
+电信金豆换话费 = type=cron,cronexp=0 10 */3 * *,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/dianx/dianx.js
+
+# > 52破解
+52破解 = type=cron,cronexp="4 0 * * *",script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js,script-update-interval=0,wake-system=true
+
+# > 网易云
+网易云 = type=cron,cronexp="4 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js,script-update-interval=0,wake-system=true
+
+# > 携程
+携程 = type=cron,cronexp="4 0 * * *",script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/ctrip.js,script-update-interval=0,wake-system=true
+
+# > 百度贴吧
+百度贴吧 = type=cron,cronexp="5 0 * * *",timeout=30,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js,script-update-interval=0,wake-system=true
+
+# > 饿了么
+饿了么 = type=cron,cronexp="6 0 * * *",script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js,script-update-interval=0,wake-system=true
+饿了么-打卡领红包 = type=cron,cronexp="6 0 * * *",script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/elem/elemCheckIn.js,script-update-interval=0,wake-system=true
+
+# > 美团没有外卖
+美团 = type=cron,cronexp="6 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,script-update-interval=0,wake-system=true
+
+# > 微博 & 微博钱包
+微博&钱包 = type=cron,cronexp="7 0 * * *",script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js,script-update-interval=0,wake-system=true
+
+# > 滴滴打车
+滴滴打车 = type=cron,cronexp="7 0 * * *",script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js,script-update-interval=0,wake-system=true
+
+# > 什么值得买
+什么值得买 = type=cron,cronexp= "7 0 * * *",script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,script-update-interval=0,wake-system=true
+
+# > 顺丰速运
+//顺丰速运 = type=cron,cronexp= "8 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0,wake-system=true
+
+# > 喜马拉雅
+喜马拉雅 = type=cron,cronexp= "8 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js,script-update-interval=0,wake-system=true
+
+# > 人人视频
+人人视频 = type=cron,cronexp="11 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js,script-update-interval=0,wake-system=true
+
+# > wps(签到时间调整为 06:00 - 13:00 之间)
+wps签到 = type=cron,cronexp="10 8 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.js,script-update-interval=0,wake-system=true

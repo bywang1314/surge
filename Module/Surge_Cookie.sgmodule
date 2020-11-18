@@ -1,0 +1,92 @@
+#!name=Surge_Cookie
+#!desc=获取ck脚本
+#!system=ios
+
+[Script]
+# true 表示开启，false 表示关闭
+# http-request 处理请求的脚本
+# http-response 处理请求响应的脚本
+# cron 定时脚本
+
+# > B站漫画
+# 自动判断是否更新了cookie不需要手动禁用它。
+B站漫画Cookie = max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js,type=http-request,pattern=^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5)
+
+# > B站直播
+# 浏览器访问并登录: https://www.bilibili.com 或 https://live.bilibili.com 系统提示:获取Cookie: 成功
+B站直播cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js,type=http-request,pattern=^https:\/\/(www|live)\.bilibili\.com\/?.?
+
+# > 京东签到获取cookie
+# 浏览器登录 https://bean.m.jd.com 点击签到并且出现签到日历
+京东cookie = max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex)
+
+# > 腾讯视频获取cookie
+# 手机浏览器访问并登录下https://film.qq.com/,随便选 1 部电影观看
+腾讯视频cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.cookie.js,type=http-request,pattern=^https:\/\/access.video.qq.com\/user\/auth_refresh
+
+# > 爱奇艺获取cookie
+爱奇艺cookie = script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,type=http-request,pattern=^https:\/\/iface\d\.iqiyi\.com\/.+?psp_cki=
+
+# > 苏宁易购
+苏宁易购cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js,requires-body=true,type=http-request,pattern=^https:\/\/passport.suning.com\/ids\/login$
+苏宁易购cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js,type=http-request,pattern=^https:\/\/luckman.suning.com\/luck-web\/sign\/api\/clock_sign.do
+苏宁易购cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js,type=http-request,pattern=^https:\/\/sign.suning.com\/sign-web\/m\/promotion\/sign\/doSign.do
+苏宁易购cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js,type=http-request,pattern=^https:\/\/gameapi.suning.com\/sngame-web\/(api\/signin\/private\/customerSignOperation.do|gateway\/api\/queryPrize.do)
+
+# > 中国电信获取cookie
+电信cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js,type=http-request,pattern=^https:\/\/wapside.189.cn:9001\/api\/home\/homeInfo,requires-body=true
+# > 电信金豆换话费
+电信金豆换话费Cookie = script-path=^https:\/\/wapside.189.cn:9001\/api\/exchange\/consume,type=http-request,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/dianx/dianx.js, requires-body=true
+
+
+# > 52破解论坛获取Cookie
+吾爱Cookie = script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js,type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?
+
+# > 网易云签到获取cookie
+# 浏览器访问并登录: https://music.163.com/m/login, 登录成功后再用浏览器访问一下: https://music.163.com/#/user/level
+网易云音乐cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js,type=http-request,pattern=^https:\/\/music.163.com\/weapi\/user\/level
+
+# > 携程旅行获取cookie 111111
+携程cookie = script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/ctrip_cookie.js,type=http-request,pattern=https:\/\/m\.ctrip\.com\/restapi\/soa2\/14946\/json\/userBaseInfo
+
+# > 百度贴吧获取cookie
+# 浏览器先登录，再用浏览器访问一下: https://tieba.baidu.com 或者 https://tieba.baidu.com/index/
+百度贴吧cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js,type=http-request,pattern=^https?:\/\/tieba\.baidu\.com\/?.?
+
+# > 饿了么获取cookie
+饿了么Cookies = script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemGetCookies.js,type=http-request,pattern=^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$
+
+# > 美团没有外卖获取cookie
+美团cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js,requires-body=true,type=http-request,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/
+
+# > 微博 & 微博钱包获取cookie
+微博cookie = script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js,type=http-request,pattern=https:\/\/api\.weibo\.cn\/\d\/video\/machine\?gsid
+微博钱包cookie = script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js,type=http-request,pattern=http-request,pattern=https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/do\?
+
+# > 滴滴打车获取cookie
+滴滴cookie = script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js,type=http-request,pattern=^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?
+
+# > 什么值得买获取cookie
+# 手机浏览器访问 https://zhiyou.smzdm.com/ 进行一次登录
+什么值得买_获取cookie = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/zhiyou\.smzdm\.com\/user$
+什么值得买_获取账号密码 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$
+
+# > 喜马拉雅获取cookie
+喜马拉雅cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js,type=http-request,pattern=^https?:\/\/.*\/mobile\-user\/homePage\/.*
+
+# > 顺丰速运获取cookie
+顺丰速运cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,type=http-request,pattern=^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index
+顺丰速运cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,type=http-request,pattern=^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect
+
+# > 人人视频获取cookie
+人人cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js,type=http-request,pattern=^https:\/\/api\.rr\.tv\/user\/profile
+
+# > WPS获取cookie
+WPS获取cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.cookie.js,type=http-request,pattern=^https:\/\/zt.wps.cn\/2018\/docer_check_in\/api\/act_list
+
+
+[MITM]
+# key = value：直接覆盖原始值
+# key = %APPEND% value：在原始值的末尾进行追加（仅适用于适用逗号分隔的字段）
+# key = %INSERT% value：在原始值的开始进行插入（仅适用于适用逗号分隔的字段）
+hostname = %APPEND% passport.biligame.com, *.bilibili.com, api.m.jd.com, *.video.qq.com, iface?.iqiyi.com, passport.suning.com, luckman.suning.com, sign.suning.com, gameapi.suning.com, wapside.189.cn:9001, www.52pojie.cn, music.163.com, m.ctrip.com, tieba.baidu.com, h5.ele.me, i.meituan.com, api.weibo.cn, pay.sc.weibo.com, as.xiaojukeji.com, *.smzdm.com, mobwsa.ximalaya.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.rr.tv, zt.wps.cn
