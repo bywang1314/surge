@@ -1,6 +1,6 @@
 #!name=Surge_Task
 #!desc=定时签到脚本
-#!system=ios
+
 
 [Script]
 # true 表示开启，false 表示关闭
