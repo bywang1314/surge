@@ -1,6 +1,5 @@
 #!name=BlockOTA
 #!desc=屏蔽ios系统升级
-#!system=ios
 
 [Rule]
 DOMAIN,gdmf.apple.com,REJECT
