@@ -1,6 +1,6 @@
 #!name=Surge_Cookie
 #!desc=获取ck脚本
-#!system=ios
+
 
 [Script]
 # true 表示开启，false 表示关闭
