@@ -34,10 +34,6 @@ URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/
 ^https?:\/\/api\.smzdm\.com\/v\d\/util\/(banner|loading) - reject
 ^https?:\/\/app-api\.smzdm\.com\/util\/loading - reject
 
-[Map Local]
-# 知乎去除最常访问
-^https?:\/\/api\.zhihu\.com\/moments\/recent data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank.json"
-
 [Script]
 #破解类
 # > 小小影视
