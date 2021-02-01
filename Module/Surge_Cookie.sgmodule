@@ -84,9 +84,12 @@ B站直播cookie = script-path=https://raw.githubusercontent.com/chavyleung/scri
 # > WPS获取cookie
 WPS获取cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.cookie.js,type=http-request,pattern=^https:\/\/zt.wps.cn\/2018\/docer_check_in\/api\/act_list
 
+# > 小米运动
+小米运动获取Token = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login, requires-body=1, max-size=0, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/backUp/xmSports.js
+
 
 [MITM]
 # key = value：直接覆盖原始值
 # key = %APPEND% value：在原始值的末尾进行追加（仅适用于适用逗号分隔的字段）
 # key = %INSERT% value：在原始值的开始进行插入（仅适用于适用逗号分隔的字段）
-hostname = %APPEND% passport.biligame.com, *.bilibili.com, api.m.jd.com, *.video.qq.com, iface?.iqiyi.com, passport.suning.com, luckman.suning.com, sign.suning.com, gameapi.suning.com, wapside.189.cn:9001, www.52pojie.cn, music.163.com, m.ctrip.com, tieba.baidu.com, h5.ele.me, i.meituan.com, api.weibo.cn, pay.sc.weibo.com, as.xiaojukeji.com, *.smzdm.com, mobwsa.ximalaya.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.rr.tv, zt.wps.cn
+hostname = %APPEND% passport.biligame.com, *.bilibili.com, api.m.jd.com, *.video.qq.com, iface?.iqiyi.com, passport.suning.com, luckman.suning.com, sign.suning.com, gameapi.suning.com, wapside.189.cn:9001, www.52pojie.cn, music.163.com, m.ctrip.com, tieba.baidu.com, h5.ele.me, i.meituan.com, api.weibo.cn, pay.sc.weibo.com, as.xiaojukeji.com, *.smzdm.com, mobwsa.ximalaya.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.rr.tv, zt.wps.cn, account.huami.com
