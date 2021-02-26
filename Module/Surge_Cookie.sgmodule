@@ -27,11 +27,6 @@ B站直播cookie = script-path=https://raw.githubusercontent.com/chavyleung/scri
 # > 爱奇艺获取cookie
 爱奇艺cookie = script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,type=http-request,pattern=^https:\/\/iface\d\.iqiyi\.com\/.+?psp_cki=
 
-# > 苏宁易购
-苏宁易购cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js,requires-body=true,type=http-request,pattern=^https:\/\/passport.suning.com\/ids\/login$
-苏宁易购cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js,type=http-request,pattern=^https:\/\/luckman.suning.com\/luck-web\/sign\/api\/clock_sign.do
-苏宁易购cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js,type=http-request,pattern=^https:\/\/sign.suning.com\/sign-web\/m\/promotion\/sign\/doSign.do
-苏宁易购cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js,type=http-request,pattern=^https:\/\/gameapi.suning.com\/sngame-web\/(api\/signin\/private\/customerSignOperation.do|gateway\/api\/queryPrize.do)
 
 # > 中国电信获取cookie
 电信cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js,type=http-request,pattern=^https:\/\/wapside.189.cn:9001\/api\/home\/homeInfo,requires-body=true
@@ -46,7 +41,7 @@ B站直播cookie = script-path=https://raw.githubusercontent.com/chavyleung/scri
 # 浏览器访问并登录: https://music.163.com/m/login, 登录成功后再用浏览器访问一下: https://music.163.com/#/user/level
 网易云音乐cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js,type=http-request,pattern=^https:\/\/music.163.com\/weapi\/user\/level
 
-# > 携程旅行获取cookie 111111
+# > 携程旅行获取cookie
 携程cookie = script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/ctrip_cookie.js,type=http-request,pattern=https:\/\/m\.ctrip\.com\/restapi\/soa2\/14946\/json\/userBaseInfo
 
 # > 百度贴吧获取cookie
@@ -64,19 +59,10 @@ B站直播cookie = script-path=https://raw.githubusercontent.com/chavyleung/scri
 微博钱包cookie = script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js,type=http-request,pattern=http-request,pattern=https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/do\?
 
 # > 滴滴打车获取cookie
-滴滴cookie = script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi.js,type=http-request,pattern=^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?
-
-# > 什么值得买获取cookie
-# 手机浏览器访问 https://zhiyou.smzdm.com/ 进行一次登录
-什么值得买_获取cookie = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/zhiyou\.smzdm\.com\/user$
-什么值得买_获取账号密码 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$
+滴滴cookie = script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js,type=http-request,pattern=^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\?
 
 # > 喜马拉雅获取cookie
 喜马拉雅cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js,type=http-request,pattern=^https?:\/\/.*\/mobile\-user\/homePage\/.*
-
-# > 顺丰速运获取cookie
-顺丰速运cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,type=http-request,pattern=^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index
-顺丰速运cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,type=http-request,pattern=^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect
 
 # > 人人视频获取cookie
 人人cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js,type=http-request,pattern=^https:\/\/api\.rr\.tv\/user\/profile
@@ -92,4 +78,4 @@ WPS获取cookie = script-path=https://raw.githubusercontent.com/chavyleung/scrip
 # key = value：直接覆盖原始值
 # key = %APPEND% value：在原始值的末尾进行追加（仅适用于适用逗号分隔的字段）
 # key = %INSERT% value：在原始值的开始进行插入（仅适用于适用逗号分隔的字段）
-hostname = %APPEND% passport.biligame.com, *.bilibili.com, api.m.jd.com, *.video.qq.com, iface?.iqiyi.com, passport.suning.com, luckman.suning.com, sign.suning.com, gameapi.suning.com, wapside.189.cn:9001, www.52pojie.cn, music.163.com, m.ctrip.com, tieba.baidu.com, h5.ele.me, i.meituan.com, api.weibo.cn, pay.sc.weibo.com, as.xiaojukeji.com, *.smzdm.com, mobwsa.ximalaya.com, sf-integral-sign-in.weixinjia.net, mcs-mimp-web.sf-express.com, *.rr.tv, zt.wps.cn, account.huami.com
+hostname = %APPEND% passport.biligame.com, *.bilibili.com, api.m.jd.com, *.video.qq.com, iface?.iqiyi.com, wapside.189.cn:9001, www.52pojie.cn, music.163.com, m.ctrip.com, tieba.baidu.com, h5.ele.me, i.meituan.com, api.weibo.cn, pay.sc.weibo.com, as.xiaojukeji.com, mobwsa.ximalaya.com, *.rr.tv, zt.wps.cn, account.huami.com
