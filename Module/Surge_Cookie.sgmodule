@@ -64,9 +64,6 @@ B站直播cookie = script-path=https://raw.githubusercontent.com/chavyleung/scri
 # > 喜马拉雅获取cookie
 喜马拉雅cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js,type=http-request,pattern=^https?:\/\/.*\/mobile\-user\/homePage\/.*
 
-# > 人人视频获取cookie
-人人cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js,type=http-request,pattern=^https:\/\/api\.rr\.tv\/user\/profile
-
 # > WPS获取cookie
 WPS获取cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.cookie.js,type=http-request,pattern=^https:\/\/zt.wps.cn\/2018\/docer_check_in\/api\/act_list
 
@@ -78,4 +75,4 @@ WPS获取cookie = script-path=https://raw.githubusercontent.com/chavyleung/scrip
 # key = value：直接覆盖原始值
 # key = %APPEND% value：在原始值的末尾进行追加（仅适用于适用逗号分隔的字段）
 # key = %INSERT% value：在原始值的开始进行插入（仅适用于适用逗号分隔的字段）
-hostname = %APPEND% passport.biligame.com, *.bilibili.com, api.m.jd.com, *.video.qq.com, iface?.iqiyi.com, wapside.189.cn:9001, www.52pojie.cn, music.163.com, m.ctrip.com, tieba.baidu.com, h5.ele.me, i.meituan.com, api.weibo.cn, pay.sc.weibo.com, as.xiaojukeji.com, mobwsa.ximalaya.com, *.rr.tv, zt.wps.cn, account.huami.com
+hostname = %APPEND% passport.biligame.com, *.bilibili.com, api.m.jd.com, *.video.qq.com, iface?.iqiyi.com, wapside.189.cn:9001, www.52pojie.cn, music.163.com, m.ctrip.com, tieba.baidu.com, h5.ele.me, i.meituan.com, api.weibo.cn, pay.sc.weibo.com, as.xiaojukeji.com, mobwsa.ximalaya.com, zt.wps.cn, account.huami.com

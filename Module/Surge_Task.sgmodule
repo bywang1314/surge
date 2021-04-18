@@ -63,9 +63,6 @@ B站漫画 = type=cron,cronexp="1 0 * * *",script-path=https://raw.githubusercon
 # > 喜马拉雅
 喜马拉雅 = type=cron,cronexp= "8 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js,script-update-interval=0,wake-system=true
 
-# > 人人视频
-人人视频 = type=cron,cronexp="11 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js,script-update-interval=0,wake-system=true
-
 # > wps(签到时间调整为 06:00 - 13:00 之间)
 wps签到 = type=cron,cronexp="10 8 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.js,script-update-interval=0,wake-system=true
 
