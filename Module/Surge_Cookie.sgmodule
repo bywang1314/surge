@@ -48,9 +48,6 @@ B站直播cookie = script-path=https://raw.githubusercontent.com/chavyleung/scri
 # 浏览器先登录，再用浏览器访问一下: https://tieba.baidu.com 或者 https://tieba.baidu.com/index/
 百度贴吧cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js,type=http-request,pattern=^https?:\/\/tieba\.baidu\.com\/?.?
 
-# > 饿了么获取cookie
-饿了么Cookies = script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemGetCookies.js,type=http-request,pattern=^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$
-
 # > 美团没有外卖获取cookie
 美团cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js,requires-body=true,type=http-request,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/
 
@@ -75,4 +72,4 @@ WPS获取cookie = script-path=https://raw.githubusercontent.com/chavyleung/scrip
 # key = value：直接覆盖原始值
 # key = %APPEND% value：在原始值的末尾进行追加（仅适用于适用逗号分隔的字段）
 # key = %INSERT% value：在原始值的开始进行插入（仅适用于适用逗号分隔的字段）
-hostname = %APPEND% passport.biligame.com, *.bilibili.com, api.m.jd.com, *.video.qq.com, iface?.iqiyi.com, wapside.189.cn:9001, www.52pojie.cn, music.163.com, m.ctrip.com, tieba.baidu.com, h5.ele.me, i.meituan.com, api.weibo.cn, pay.sc.weibo.com, as.xiaojukeji.com, mobwsa.ximalaya.com, zt.wps.cn, account.huami.com
+hostname = %APPEND% passport.biligame.com, *.bilibili.com, api.m.jd.com, *.video.qq.com, iface?.iqiyi.com, wapside.189.cn:9001, www.52pojie.cn, music.163.com, m.ctrip.com, tieba.baidu.com, i.meituan.com, api.weibo.cn, pay.sc.weibo.com, as.xiaojukeji.com, mobwsa.ximalaya.com, zt.wps.cn, account.huami.com
