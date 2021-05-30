@@ -19,13 +19,7 @@ URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/
 # app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
 
 # > 抖音 去广告&水印
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/aweme\/post\/ https://aweme.snssdk.com/aweme/v1/aweme/post/ header
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/follow\/feed\/ https://aweme.snssdk.com/aweme/v1/follow/feed/ header
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/nearby\/feed\/ https://aweme.snssdk.com/aweme/v1/nearby/feed/ header
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/search\/item\/ https://aweme.snssdk.com/aweme/v1/search/item/ header
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/general\/search\/single\/ https://aweme.snssdk.com/aweme/v1/general/search/single/ header
-^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
+^https?:\/\/(.*)\.amemv\.com\/aweme\/v2\/(follow\/)?feed\/ https://$1.amemv.com/aweme/v1/$2feed/ header
 
 # > 115修改签到为离线下载
 ^http:\/\/115\.com\/\?ct=sign$ http://115.com/lx?taskdg=1 header
@@ -34,6 +28,15 @@ URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/banner - reject
 ^https?:\/\/api\.smzdm\.com\/v\d\/util\/(banner|loading) - reject
 ^https?:\/\/app-api\.smzdm\.com\/util\/loading - reject
+
+
+[Map Local]
+# 知乎去除最常访问
+^https?:\/\/api\.zhihu\.com\/moments\/recent data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank/blank_dict.json"
+# 知乎其他广告拦截
+^https?:\/\/api\.zhihu\.com\/(notifications\/v\d\/count|v\d\/package|me\/guides|drama\/living-info|ad|fringe|commercial|market\/popovers|.*featured-comment-ad) data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank/blank_dict.json"
+# 屏蔽消息页面上拉的用户精选
+^https?:\/\/api\.zhihu\.com/moments/hybrid\? data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank/blank_dict.json"
 
 
 [Script]
@@ -95,10 +98,14 @@ douyin_ad = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1
 知乎_信息流去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/(moments|topstory)(\/|\?)?(recommend|action=|feed_type=)(?!\/people),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
 知乎_获取黑名单 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/settings\/blocked_users,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
 知乎_回答黑名单增强 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/v4\/questions,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
-知乎_官方消息去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message\?|timeline\/entry\/system_message),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
+知乎_官方消息去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message|timeline\/entry\/system_message),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
 知乎_预置关键词去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/search\/preset_words\?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
 知乎_回答内容优化 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/www\.zhihu\.com\/appview\/v2\/answer\/.*(entry=(?!(preload-topstory|preload-search|preload-subscription)))?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
 知乎_优化软件配置 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/appcloud2\.zhihu\.com\/v\d+\/config,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
+知乎_热搜去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/search\/top_search\/tabs\/hot\/items,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
+知乎_热榜去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/topstory\/hot-lists?(\?|\/),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
+知乎_评论去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/(comment_v5\/)?(answers|comments?|articles|pins)\/\d+\/(root_|child_)?comments?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
+知乎_解锁关键词屏蔽 = type=http-request,requires-body=1,max-size=0,pattern=^https?:\/\/api\.zhihu\.com\/feed-root\/block,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_plus.js
 
 # > 什么值得买
 什么值得买_首页去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/homepage-api\.smzdm\.com\/home,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
