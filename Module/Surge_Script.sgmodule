@@ -56,14 +56,11 @@ xjsp.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.c
 # > Pear 雪梨
 pear.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/bywang1314/Scripts/main/pear.js,type=http-response,pattern=^https:\/\/(www\.baidu.com2\.club|ayk\.tmdidi\.com|m\.pearkin\.com|souhu\.mett\.me|bkcd\.b-cdn\.net)\/(api\/movie\/WatchMovie|api\/Account\/CheckVip|api\/account\/IndexDetail)
 
-# > 美颜相机 v9.6.20版本
-myxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/bywang1314/Scripts/main/Meiyanxiangji.js,type=http-response,pattern=^https:\/\/api\.meiyan\.com\/vip\/user_info
-
-# > 美图秀秀 v9.0.51版本
-mtxx.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/bywang1314/Scripts/main/mtxx.js,type=http-response,pattern=^https:\/\/api\.xiuxiu\.meitu\.com\/v1\/user\/show\.json
+# > vsco v220.0
+myxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/bywang1314/Scripts/main/vsoc.js,type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$
 
 # > 克拉壁纸 v4.7.3版本
-clarity.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/clarity.js,type=http-response,pattern=^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll)
+clarity.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/bywang1314/Scripts/main/clarity.js,type=http-response,pattern=^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll)
 
 #功能类
 # > 115离线
@@ -128,4 +125,4 @@ jd_price.js = requires-body=1,script-path=https://raw.githubusercontent.com/yich
 # key = value：直接覆盖原始值
 # key = %APPEND% value：在原始值的末尾进行追加（仅适用于适用逗号分隔的字段）
 # key = %INSERT% value：在原始值的开始进行插入（仅适用于适用逗号分隔的字段）
-hostname = %APPEND% *.xxjjappss.com, *.*.mob.com, *.rr.tv, *.lagoapps.com, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, *.xiangxiangapps.com, bkcd.b-cdn.net, souhu.mett.me, ayk.tmdidi.com, m.pearkin.com, www.baidu.com2.club, api.meiyan.com, api.xiuxiu.meitu.com, owa.videoshowiosglobalserver.com, claritywallpaper.com, *.115.com, *.amemv.com, www.bilibili.com, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, ios.prod.ftl.netflix.com, api.m.jd.com, www.zhihu.com, api.zhihu.com, zhuanlan.zhihu.com, appcloud2.zhihu.com, m.client.10010.com, homepage-api.smzdm.com,haojia-api.smzdm.com,article-api.smzdm.com,haojia.m.smzdm.com,app-api.smzdm.com,s-api.smzdm.com
+hostname = %APPEND% *.xxjjappss.com, *.*.mob.com, *.rr.tv, *.lagoapps.com, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, *.xiangxiangapps.com, bkcd.b-cdn.net, souhu.mett.me, ayk.tmdidi.com, m.pearkin.com, www.baidu.com2.club, owa.videoshowiosglobalserver.com, claritywallpaper.com, *.115.com, *.amemv.com, www.bilibili.com, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, ios.prod.ftl.netflix.com, api.m.jd.com, www.zhihu.com, api.zhihu.com, zhuanlan.zhihu.com, appcloud2.zhihu.com, m.client.10010.com, homepage-api.smzdm.com, haojia-api.smzdm.com, article-api.smzdm.com, haojia.m.smzdm.com, app-api.smzdm.com, s-api.smzdm.com, api.revenuecat.com
